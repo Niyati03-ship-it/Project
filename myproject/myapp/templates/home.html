@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summarizer</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <h2>Welcome, {{ request.user.username }}</h2>
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Text Summarizer</h1>
+
+    <a href="{% url 'logout' %}">Logout</a>
+
+    <form method="POST">
+        {% csrf_token %}
+        <textarea name="text" rows="10" placeholder="Paste your text here...">{{ request.POST.text }}</textarea>
+        <button type="submit" onclick="this.innerText='Summarizing...'">
+            Summarize
+        </button>
+    </form>
+
+
+    {% if summary %}
+<div class="output">
+    <h3>Summary:</h3>
+    <p id="summaryText">{{ summary }}</p>
+
+    <p>
+        Original Words: {{ original_count }} |
+        Summary Words: {{ summary_count }}
+    </p>
+</div>
+{% endif %}
+</div>
+<button onclick="copyText()">Copy Summary</button>
+
+</body>
+</html>
+
+
+<script>
+    function copyText() {
+        let text = document.getElementById("summaryText").innerText;
+        navigator.clipboard.writeText(text);
+        alert("Summary copied!");
+}
+</script>
