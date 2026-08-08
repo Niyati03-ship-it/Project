@@ -1,0 +1,11 @@
+<h2>Dashboard</h2>
+<a href="/add/">Add Task</a> | <a href="/logout/">Logout</a>
+<hr>
+{% for task in tasks %}
+<p>
+<b>{{ task.title }}</b><br>
+Priority: {{ task.priority }} |
+Due: {{ task.due_date }} |
+Assigned: {{ task.assigned_to.username }}
+</p>
+{% endfor %}
