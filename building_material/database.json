@@ -1,0 +1,61 @@
+{
+    "stock": {
+        "bricks": 4970,
+        "cement": 645,
+        "sand": 1194
+    },
+    "orders": [
+        {
+            "user": "niyati",
+            "bricks": 3000,
+            "cement": 300,
+            "sand": 20,
+            "assigned": true,
+            "transporter": "niyati"
+        },
+        {
+            "user": "niyati",
+            "bricks": 5000,
+            "cement": 50,
+            "sand": 800,
+            "assigned": true,
+            "transporter": "niyati"
+        },
+        {
+            "user": "niya",
+            "bricks": 30,
+            "cement": 5,
+            "sand": 6,
+            "assigned": true,
+            "transporter": "gajjar"
+        }
+    ],
+    "deliveries": [
+        {
+            "user": "niyati",
+            "bricks": 3000,
+            "cement": 300,
+            "sand": 20,
+            "assigned": true,
+            "transporter": "niyati",
+            "delivered": true
+        },
+        {
+            "user": "niyati",
+            "bricks": 5000,
+            "cement": 50,
+            "sand": 800,
+            "assigned": true,
+            "transporter": "niyati",
+            "delivered": true
+        },
+        {
+            "user": "niya",
+            "bricks": 30,
+            "cement": 5,
+            "sand": 6,
+            "assigned": true,
+            "transporter": "gajjar"
+        }
+    ]
+}
